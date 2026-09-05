@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#080808"/>
+  <g transform="translate(875 315)" fill="none" stroke="#14f0d6">
+    <circle r="232" opacity=".28"/><circle r="165" opacity=".2"/><circle r="98" opacity=".2"/>
+    <path d="M-232 0h464M0-232v464" opacity=".13"/><path d="M0 0 155-155" stroke-width="3" opacity=".8"/>
+    <circle r="5" fill="#14f0d6" stroke="none"/>
+  </g>
+  <g font-family="Inter,Arial,sans-serif">
+    <text x="86" y="104" fill="#14f0d6" font-size="18" font-weight="700" letter-spacing="4">LIQUIDITY RADAR</text>
+    <text x="80" y="280" fill="#f1f5f2" font-size="72" font-weight="500" letter-spacing="-4">Know your</text>
+    <text x="80" y="359" fill="#14f0d6" font-size="72" font-weight="500" letter-spacing="-4">liquidity at risk.</text>
+    <text x="84" y="445" fill="#8b9591" font-size="23">Whole-balance-sheet liquidity forecasting</text>
+    <text x="84" y="478" fill="#8b9591" font-size="23">for family offices.</text>
+    <text x="84" y="558" fill="#69736f" font-size="14" letter-spacing="2">ABU DHABI · PRIVATE PREVIEW</text>
+  </g>
+</svg>
