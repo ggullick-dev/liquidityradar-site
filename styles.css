@@ -212,7 +212,14 @@ h1 em { color: var(--teal); font-style: normal; }
   background: #000;
 }
 
-.video-frame iframe { width: 100%; height: 100%; border: 0; }
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+  object-fit: contain;
+}
 
 body:has(.video-dialog[open]) { overflow: hidden; }
 
@@ -303,7 +310,14 @@ footer {
   .actions { align-items: flex-start; flex-direction: column; gap: 22px; }
   .primary { width: 100%; }
   footer { min-height: 82px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 8px; }
-  .video-dialog { width: calc(100vw - 20px); }
-  .video-shell { padding: 0 10px 10px; }
-  .video-bar { min-height: 70px; }
+  .video-dialog {
+    width: 100vw;
+    height: 100dvh;
+    max-height: none;
+    margin: 0;
+    border: 0;
+  }
+  .video-shell { height: 100%; padding: 0 10px 10px; display: flex; flex-direction: column; }
+  .video-bar { min-height: 70px; flex: 0 0 auto; }
+  .video-frame { flex: 1; aspect-ratio: auto; display: grid; place-items: center; }
 }

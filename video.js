@@ -1,16 +1,18 @@
 const dialog = document.querySelector('.video-dialog');
 const openButton = document.querySelector('[data-video-open]');
 const closeButton = document.querySelector('[data-video-close]');
-const player = dialog.querySelector('iframe');
+const player = dialog.querySelector('video');
 
 function openVideo() {
-  player.src = player.dataset.videoSrc;
   dialog.showModal();
+  player.currentTime = 0;
+  player.play().catch(() => {});
 }
 
 function closeVideo() {
+  player.pause();
+  player.currentTime = 0;
   dialog.close();
-  player.removeAttribute('src');
 }
 
 openButton.addEventListener('click', openVideo);
@@ -21,6 +23,7 @@ dialog.addEventListener('click', (event) => {
 });
 
 dialog.addEventListener('close', () => {
-  player.removeAttribute('src');
+  player.pause();
+  player.currentTime = 0;
   openButton.focus();
 });
