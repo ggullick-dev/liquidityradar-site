@@ -136,6 +136,8 @@ h1 em { color: var(--teal); font-style: normal; }
   font-weight: 700;
   letter-spacing: .025em;
   transition: background .2s, color .2s, transform .2s;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .primary:hover { background: transparent; color: var(--teal); transform: translateY(-2px); }
@@ -149,6 +151,70 @@ h1 em { color: var(--teal); font-style: normal; }
 }
 
 .contact:hover { color: var(--paper); border-color: var(--teal); }
+
+.video-dialog {
+  width: min(1120px, calc(100vw - 48px));
+  max-width: none;
+  padding: 0;
+  border: 1px solid rgba(20, 240, 214, .32);
+  background: #080a09;
+  color: var(--paper);
+  box-shadow: 0 35px 120px rgba(0, 0, 0, .8), 0 0 80px rgba(20, 240, 214, .06);
+}
+
+.video-dialog::backdrop {
+  background: rgba(0, 0, 0, .88);
+  backdrop-filter: blur(10px);
+}
+
+.video-shell { padding: 0 24px 24px; }
+
+.video-bar {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video-kicker {
+  color: var(--teal);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.video-bar h2 {
+  margin: 5px 0 0;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+.video-close {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--paper);
+  font: 300 29px/1 ui-sans-serif, sans-serif;
+  cursor: pointer;
+  transition: color .2s, border-color .2s, transform .2s;
+}
+
+.video-close:hover { color: var(--teal); border-color: var(--teal); transform: rotate(8deg); }
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-frame iframe { width: 100%; height: 100%; border: 0; }
+
+body:has(.video-dialog[open]) { overflow: hidden; }
 
 .radar {
   position: relative;
@@ -237,4 +303,7 @@ footer {
   .actions { align-items: flex-start; flex-direction: column; gap: 22px; }
   .primary { width: 100%; }
   footer { min-height: 82px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 8px; }
+  .video-dialog { width: calc(100vw - 20px); }
+  .video-shell { padding: 0 10px 10px; }
+  .video-bar { min-height: 70px; }
 }

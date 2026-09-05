@@ -44,9 +44,9 @@
           <p class="intro">Whole-balance-sheet liquidity forecasting for family offices.</p>
           <p class="thesis">Every platform shows what a family owns.<br>None shows how it fails together.</p>
           <div class="actions">
-            <a class="primary" href="https://youtu.be/GEweqrtdSKg" target="_blank" rel="noopener noreferrer">
-              <span>Watch the 90-second demo</span><span aria-hidden="true">↗</span>
-            </a>
+            <button class="primary" type="button" data-video-open aria-haspopup="dialog">
+              <span>Watch the 90-second demo</span><span aria-hidden="true">▶</span>
+            </button>
             <a class="contact" href="mailto:gareth@liquidityradar.io">gareth@liquidityradar.io</a>
           </div>
         </div>
@@ -68,5 +68,29 @@
         <span>Private capital, made visible.</span>
       </footer>
     </main>
+
+    <dialog class="video-dialog" aria-labelledby="video-title">
+      <div class="video-shell">
+        <div class="video-bar">
+          <div>
+            <span class="video-kicker">Liquidity Radar</span>
+            <h2 id="video-title">90-second demo</h2>
+          </div>
+          <button class="video-close" type="button" data-video-close aria-label="Close video">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="video-frame">
+          <iframe
+            title="Liquidity Radar 90-second demo"
+            data-video-src="https://www.youtube-nocookie.com/embed/GEweqrtdSKg?autoplay=1&amp;rel=0&amp;modestbranding=1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </dialog>
+    <script src="video.js" defer></script>
   </body>
 </html>
