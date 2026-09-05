@@ -110,15 +110,6 @@ h1 em { color: var(--teal); font-style: normal; }
   letter-spacing: -.018em;
 }
 
-.thesis {
-  margin: 32px 0 0;
-  padding-left: 19px;
-  border-left: 1px solid rgba(20, 240, 214, .55);
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
-}
-
 .actions { display: flex; align-items: center; gap: 30px; margin-top: 45px; }
 
 .primary {
@@ -306,7 +297,6 @@ footer {
   .eyebrow { margin-bottom: 19px; }
   h1 { letter-spacing: -.062em; line-height: .92; }
   .intro { margin-top: 30px; max-width: 84%; }
-  .thesis { max-width: 92%; }
   .actions { align-items: flex-start; flex-direction: column; gap: 22px; }
   .primary { width: 100%; }
   footer { min-height: 82px; align-items: flex-start; justify-content: center; flex-direction: column; gap: 8px; }
