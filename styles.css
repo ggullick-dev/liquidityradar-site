@@ -60,6 +60,15 @@ main {
   text-transform: uppercase;
 }
 
+.status strong {
+  display: inline-block;
+  white-space: nowrap;
+  color: #dce5e1;
+  font-size: 1.32em;
+  font-weight: 650;
+  letter-spacing: .15em;
+}
+
 .status i {
   display: inline-block;
   width: 5px;
